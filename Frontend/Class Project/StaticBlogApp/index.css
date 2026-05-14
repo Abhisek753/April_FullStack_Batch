@@ -1,0 +1,207 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    text-decoration: underline;
+    color: black;
+}
+.navbar{
+    background-color: #4eacff;
+    color: #f1f1f1f1;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 1.5% 5%;
+    position: relative;
+    align-items: center;
+}
+
+.nav-left h2{
+    margin-bottom: 1%;
+}
+
+.nav-right{
+    display: grid;
+    text-align: center;
+    align-items: center;
+    grid-auto-flow: column;
+    gap: 12px;
+
+}
+
+.hamburger-icon{
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    background: none;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    border: none;
+}
+.hamburger-checkbox{
+    display: none;
+}
+.home{
+    padding: 60px;
+    background-color: aliceblue;
+}
+.home-container{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+.home-text h1{
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+.home-text p{
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.home-btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4eacff;
+
+}
+
+.home-image img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.tutorials{
+    padding: 60px 5%;
+}
+
+.tutorial-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+}
+.tutorial-card{
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.tutorial-card img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content{
+    padding: 15px;
+}
+.footer{
+    color: #ffffff;
+    background-color: #1f2933;
+    padding: 40px 5% ;
+}
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:30px
+}
+
+.footer-col ul{
+    list-style: none;
+}
+.footer-col h3{
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #4eacff;
+}
+.footer-col p{
+    font-size: 14px;
+    line-height: 1.6;
+}
+.footer-col ul li{
+    margin-bottom: 8px;
+}
+.footer-col ul a{
+    font-size: 14px ;
+    color: #d1d5db;
+}
+
+
+
+
+@media (max-width:768px) {
+    .navbar{
+  
+    grid-template-columns: 1fr auto;
+   }
+   .item1{
+    order: 2;
+   }
+   .item2{
+    order:1;
+   }
+   .hamburger-icon{
+    display: block;
+    z-index: 1001;
+   }
+   .nav-right{
+    position: absolute;
+    grid-auto-flow: row;
+    top: 100%;
+    width: 100%;
+    background-color: #4eacff;
+    left: 0;
+    display: none;
+    grid-template-columns: 1fr;
+    text-align: left;
+    gap: 15px;
+    padding: 15px 10px;
+   }
+  .hamburger-checkbox:checked ~ .nav-right{
+    display: grid;
+  }
+
+  .home-container{
+    display: grid;
+    grid-template-columns:1fr;
+    align-items: center;
+    gap: 40px;
+}
+.tutorial-container{
+
+    grid-template-columns: repeat(2,1fr);
+  
+}
+.footer-container{
+  
+    grid-template-columns: repeat(2,1fr);
+
+}
+
+}
+
+@media (max-width:480px) {
+   .tutorial-container{
+
+    grid-template-columns: repeat(1,1fr);
+  
+} 
+.footer-container{
+  
+    grid-template-columns: repeat(1,1fr);
+
+}
+}
