@@ -1,0 +1,10 @@
+{
+  
+  "movies": [
+    { "id": "1", "title": "Gadar", "views": 1000 },
+    { "id": "2", "title": "Border", "views": 2000 }
+  ],
+  "users":[
+    {"id":"1","name":"Soham","email":"so@gmail.com","password":"123456"}
+  ]
+}

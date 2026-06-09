@@ -1,0 +1,101 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #141414;
+}
+.navbar{
+   background-color: #000;
+   display: flex;
+   padding: 16px 10px;
+   justify-content: space-between;
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+   align-items: center;
+}
+
+.nav-logo{
+   color: white;
+   }
+.nav-button{
+    display: flex;
+    gap: 10px;
+}
+   .nav-btn{
+    padding: 10px 20px;
+    border: none;
+    font-size: medium;
+    border-radius: 5px;
+    font-weight: bolder;
+   }
+
+   .btn-favourite{
+    background-color: tomato;
+    color: white;
+   }
+   .btn-cart{
+     background-color:gold;
+     color: white;
+   }
+   .btn-login{
+     background-color: greenyellow;
+   }
+   .search-bar{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+   }
+   .search-bar input{
+     padding: 10px 16px;
+     border: 1px solid #555;
+     border-radius: 25px;
+     width: 100%;
+     max-width: 400px;
+     color: white;
+     background-color: #333;
+     outline: none;
+   }
+
+   .carousal-section{
+    margin: 32px 0px;
+   }
+
+   #carousal-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    height: 400px;
+   }
+.carousal-btn{
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 20px;
+    z-index: 100;
+}
+.carousal-btn.prev{
+  left: 10px;
+}
+.carousal-btn.next{
+  right: 10px;
+
+}
+
+.carousal-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousal-slide{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.carousal-slide.active{
+    display: block;
+}
