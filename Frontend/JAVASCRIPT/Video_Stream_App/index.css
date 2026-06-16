@@ -42,6 +42,14 @@ body{
    .btn-login{
      background-color: greenyellow;
    }
+   .btn-logout{
+    background-color: tomato;
+   }
+   .user-name{
+    color: white;
+    padding: 2px;
+    margin: 0px 5px;
+   }
    .search-bar{
     flex: 1;
     display: flex;

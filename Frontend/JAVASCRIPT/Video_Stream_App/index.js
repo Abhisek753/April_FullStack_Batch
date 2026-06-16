@@ -27,7 +27,7 @@ if(!moviesContainer){
 if(!movies || movies.length==0){
   moviesContainer.innerHTML="<p>No movies found</p>"
 }
-movies.forEach((movie=>{
+movies?.forEach((movie=>{
  
   const card=document.createElement("div");
   card.className="movie-card";
@@ -54,8 +54,20 @@ movies.forEach((movie=>{
 
 }
 
+const loggedInUser=JSON.parse(localStorage.getItem("loggedInUser"));
+const authSection=document.getElementById("auth-section");
+if(loggedInUser){
+  console.log(loggedInUser)
+  authSection.innerHTML=`
+  <span class="user-name">${loggedInUser.name}</span>
+  <button onclick="logout()" class="nav-btn btn-logout">Logout</button>
+  `
+}
 
-
+function logout(){
+  localStorage.removeItem("loggedInUser");
+  location.reload()
+}
 
 
 

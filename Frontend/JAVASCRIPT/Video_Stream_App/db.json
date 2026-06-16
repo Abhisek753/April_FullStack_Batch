@@ -138,8 +138,6 @@
       "rating": 9.5,
       "year": 2024
     },
-    
-   
     {
       "id": "6",
       "title": "Barbie",
@@ -156,7 +154,6 @@
       "rating": 9,
       "year": 2025
     }
-   
   ],
   "favourites": [
     {
@@ -176,15 +173,21 @@
       "password": "123456"
     },
     {
-      "id": "328c",
-      "name": "Muskan",
-      "email": "muskan@gmail.com",
+      "id": "f48b",
+      "name": "Amit",
+      "email": "amit@gmail.com",
       "password": "123456"
     },
     {
-      "id": "67b6",
-      "name": "Komal",
-      "email": "komal@gmail.com",
+      "id": "24f3",
+      "name": "Rudra",
+      "email": "rudra@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": 0.9801336132869879,
+      "name": "sm",
+      "email": "suman@gmail.com",
       "password": "123456"
     }
   ]
