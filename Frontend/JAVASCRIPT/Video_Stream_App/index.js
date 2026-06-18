@@ -18,6 +18,22 @@ async function getMoviesData(){
 }
 
 
+const handleCart= async(movie)=>{
+   try{
+      const response=await fetch("http://localhost:3000/cart",{
+         method:"POST",
+         headers:{
+           "Content-Type":"application/json"
+         },
+         body:JSON.stringify(movie)
+      });
+     alert("Movie added to cart");
+  
+   }catch(err){
+    console.log(err)
+   }
+}
+
 function displayMovies(movies=allMovies){
 
 if(!moviesContainer){
@@ -47,12 +63,29 @@ movies?.forEach((movie=>{
          </button>
          </div>
   </div>
-  
   `
+  let cartBtn=card.querySelector(".btn-cart");
+  cartBtn.addEventListener("click",(e)=>{
+    e.stopPropagation();
+    // console.log("data added to cart",movie);
+    handleCart(movie);
+
+  });
+
   moviesContainer.appendChild(card);
 }))
 
 }
+
+// FOR SEARCH MOVIES
+const searchInput=document.getElementById("search-input");
+searchInput.addEventListener("input",()=>{
+  const searchValue=searchInput.value;
+  const filterMovies=allMovies.filter(movie=>movie.title.toLowerCase().includes(searchValue.toLowerCase()));
+  console.log(filterMovies);
+  displayMovies(filterMovies);
+})
+
 
 const loggedInUser=JSON.parse(localStorage.getItem("loggedInUser"));
 const authSection=document.getElementById("auth-section");
