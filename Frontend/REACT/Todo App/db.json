@@ -1,0 +1,47 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Learn React",
+      "date": "2026-07-10",
+      "completed": false
+    },
+    {
+      "id": "3",
+      "title": "Learn Html",
+      "date": "2026-07-12",
+      "completed": true
+    },
+    {
+      "title": "Task 1",
+      "date": "2026-07-09",
+      "conpleted": false,
+      "id": "jTo6QfJQMAk"
+    },
+    {
+      "title": "Task 2",
+      "date": "2026-07-09",
+      "conpleted": true,
+      "id": "ZcIc8qOY880"
+    },
+    {
+      "title": "Task 7",
+      "date": "2026-07-09",
+      "conpleted": true,
+      "id": "1xLB09FcKMs"
+    },
+    {
+      "title": "",
+      "date": "",
+      "conpleted": false,
+      "id": "CCV5TajipCo"
+    },
+    {
+      "title": "",
+      "date": "",
+      "conpleted": false,
+      "id": "paleD-6fNwA"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
