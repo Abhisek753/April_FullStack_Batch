@@ -112,3 +112,89 @@ select:focus{
   background-color: tomato;
   color: white;
 }
+
+/* Task Listing Style */
+.todolist-container{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.todolist-container h2{
+   margin-bottom: 1.5rem;
+   color: black;
+}
+.no-task{
+   background-color: white;
+   padding: 2rem;
+   text-align: center;
+   color: red;
+   border: 8px;
+}
+.tasks-table{
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+ box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+ overflow: hidden;
+ background-color: white;
+ 
+}
+.tasks-table thead{
+  background-color: #353552;
+  color: white;
+}
+
+.tasks-table th{
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.tasks-table td{
+  padding: 1rem;
+  border-bottom: 1px solid black;
+ 
+}
+.tasks-table tbody tr:hover{
+  background-color: #a1a1b6;
+}
+.tasks-table  .line{
+  text-decoration:line-through;
+}
+.status{
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.status.done{
+  background-color: rgb(29, 210, 90);
+  color: white;
+}
+
+.status.pending{
+  background-color: rgb(246, 241, 241);
+  color: teal;
+}
+.toggle-btn,
+.delete-btn{
+   padding: 0.4rem 0.8rem;
+   margin-right: 0.5rem;
+   border: none;
+   cursor: pointer;
+   font-size: 0.85rem;
+   border-radius: 4px;
+
+  }
+
+  .toggle-btn{
+    background-color: yellow;
+     color: black;
+  }
+ .delete-btn{
+    background-color: tomato;
+  color: white;
+  }
+   .delete-btn:hover{
+    background-color: red;
+   }

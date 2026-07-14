@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {useNavigate} from "react-router-dom"
+import { toast } from "react-toastify";
 const AddTask = () => {
   const [taskName, setTaskName] = useState("");
   const [date, setDate] = useState("");
@@ -7,13 +8,15 @@ const AddTask = () => {
   const navigate=useNavigate()
   const handleSubmit = async(e) => {
     e.preventDefault();
-    if(!taskName.trim()||!date){
-      alert("Please fill all fields");
+    
+    if(taskName==""|| date==""||status==""){
+      toast.error("Please fill all required fields.");
+      return;
     }
     const newTask={
       title:taskName,
       date:date,
-      conpleted:status==="completed"
+      completed:status==="completed"
     }
     try{
      const response=await fetch("http://localhost:3000/tasks",{
@@ -24,7 +27,8 @@ const AddTask = () => {
       body:JSON.stringify(newTask)
      });
      if(response){
-      alert("Data added successfully");
+        toast.success("Data added successfully");
+      
       navigate("/");
      }else{
       console.log("Failed to add task");

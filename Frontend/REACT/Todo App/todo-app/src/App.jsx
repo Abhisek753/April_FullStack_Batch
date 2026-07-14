@@ -4,6 +4,7 @@ import AddTask from './components/AddTask'
 import { Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import "./App.css"
+import { ToastContainer } from 'react-toastify'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Route path="/add-task" element={<AddTask/>} />
 
    </Routes>
+     <ToastContainer autoClose={1000} />
     </>
   )
 }
