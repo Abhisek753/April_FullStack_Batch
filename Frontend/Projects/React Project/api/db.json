@@ -1,0 +1,9 @@
+{
+ 
+  "users": [
+    { "id": "1", "name": "Abhisek", "email": "ak@gmail.com","password":"123456","role":"jobseeker","phone":"+91 9888765456","createdAt":"2026-07-31","status":"active" },
+    { "id": "2", "name": "Rajan", "email": "ra@gmail.com","password":"123456","role":"admin","phone":"+91 9883465456","createdAt":"2026-07-31","status":"active" }
+  ]
+
+
+}
