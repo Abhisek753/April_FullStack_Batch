@@ -2,7 +2,7 @@ import React from 'react'
  import Navbar from '../components/Navbar'
  import Footer from '../components/Footer'
  import { Outlet } from 'react-router-dom'
-const Index = ({}) => {
+const Index = () => {
   return (
     <div className="flex flex-col h-screen">
       <Navbar/>

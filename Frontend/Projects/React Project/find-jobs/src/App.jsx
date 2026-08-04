@@ -8,6 +8,7 @@ import Signup from "./pages/Signup";
 import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
 import { Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -20,6 +21,18 @@ function App() {
           <Route path="/signup" element={<Signup />} />
         </Route>
       </Routes>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </>
   );
 }
