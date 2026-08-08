@@ -23,7 +23,7 @@ export const login= async (email,password)=>{
         const response=await fetch(`${API_URL}/users?email=${email}&password=${password}`);
         console.log(response)
         const data=await response.json();
-        console.log(data,"data")
+        console.log(data,"data");
         if(data.length>0){
             return data[0];
         }else{

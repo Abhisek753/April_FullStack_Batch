@@ -10,19 +10,21 @@ const LoginPage = () => {
     password:"",
    
   });
+
+//   npm uninstall json-server
+// npm install json-server@0.17.4
   const handleSubmit= async(e)=>{
     e.preventDefault();
    
     try{
        const userData={
-    
         email:formData.email,
         password:formData.password,
-
-       };
+        };
        const user=await login(formData.email, formData.password);
        if(user){
         toast.success("Login successfully");
+        
        }
 
     }catch(error){
