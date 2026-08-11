@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const JobCard = ({job}) => {
   return (
-    <div className='bg-white rounded-md hover:shadow-lg p-6 border border-gray-200'>
+    <div key={job.id} className='bg-white rounded-md hover:shadow-lg p-6 border border-gray-200'>
        <div className='flex items-start justify-between'>
         <div className='flex gap-4 flex-1'>
           {job.companyLogo && (
@@ -49,14 +49,14 @@ const JobCard = ({job}) => {
        <div className='mt-4 pt-4 border-t border-gray-200 flex justify-between items-center'>
         <div className='flex flex-wrap gap-2'>
           {job.skills?.slice(0,3).map((skill,i)=>(
-            <span className='px-2 py-1 text-gray-500 text-sm'>{skill}</span>
+            <span key={i} className='px-2 py-1 text-gray-500 text-sm'>{skill}</span>
           ))}
             {job.skills?.length>3 && (
             <span className='px-2 py-1 text-gray-500 text-sm'>+ {job.skills.length-3} more</span>
 
             )}
         </div>
-        <Link to={`/job/${job.id}`}  className='bg-primary' py-2 rounded-lg font-medium>View Details</Link>
+        <Link to={`/job/${job.id}`}  className='bg-primary py-2 rounded-lg font-medium'>View Details</Link>
        </div>
     </div>
   )

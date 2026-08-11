@@ -34,3 +34,11 @@ export const login= async (email,password)=>{
         throw error;
     }   
 }    
+
+export const logout=()=>{
+    return localStorage.removeItem("user");
+}
+
+export const isAuthenticated=()=>{
+    return JSON.parse(localStorage.getItem("user"));
+}
