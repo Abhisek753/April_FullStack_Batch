@@ -56,7 +56,7 @@ const JobCard = ({job}) => {
 
             )}
         </div>
-        <Link to={`/job/${job.id}`}  className='bg-primary py-2 rounded-lg font-medium'>View Details</Link>
+        <Link to={`/jobs/${job.id}`}  className='bg-primary py-2 rounded-lg font-medium'>View Details</Link>
        </div>
     </div>
   )

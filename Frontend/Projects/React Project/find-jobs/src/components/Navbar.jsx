@@ -27,20 +27,20 @@ useEffect(()=>{
         <div className="container  mx-auto px-4">
           <div className="flex gap-x-2 justify-between items-center h-16">
             <Link
-              to="/"
+              to={user?"/jobs":"/"}
               className="flex items-center font-bold text-xl space-x-2"
             >
               <span className="text-2xl text-blue-500">JobPortal</span>
             </Link>
             <div className="flex-1 justify-center mx-8 items-center">
-              <div className="relative w-full flex max-w-md hidden md:flex">
+              {/* <div className="relative w-full flex max-w-md hidden md:flex">
                 <FaSearch className="absolute left-3 top-1/3 text-gray-400" />
                 <input
                   type="text"
                   className="w-full rounded-full border border-gray-200 bg-gray-50 py-2 pl-10 pr-4 outline-none "
                   placeholder="Search Jobs..."
                 />
-              </div>
+              </div> */}
             </div>
             {user?(
               <>

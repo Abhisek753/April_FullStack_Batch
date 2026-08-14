@@ -10,6 +10,7 @@ import HomePage from "./pages/HomePage";
 import { Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import JobListingPage from "./pages/JobListingPage";
+import JobDetailPage from "./pages/JobDetailPage";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route path="/home" element={<HomePage />} />
              <Route path="/jobs" element={<JobListingPage />} />
+              <Route path="/jobs/:id" element={<JobDetailPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<Signup />} />
         </Route>

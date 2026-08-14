@@ -54,6 +54,13 @@ const JobListingPage = () => {
     if (filters.workMode) {
       result = result.filter((job) => job.workMode === filters.workMode);
     }
+
+    //Salary Filter
+    if(filters.salary){
+      const [min,max]=filters.salary.split("-").map(Number);
+      result=result.filter((job)=>job.salaryMin>=min && job.salaryMin<=max)||(job.salaryMax>=min && job.salaryMax<=max);
+    }
+
     setFiltered0Jobs(result);
   };
 

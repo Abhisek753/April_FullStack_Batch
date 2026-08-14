@@ -7,6 +7,7 @@ const Filters = ({onFilterChange,initialFilter}) => {
   type:initialFilter?.type || "",
   experience:initialFilter?.experience || "",
   workMode:initialFilter?.workMode || "",
+  salary:initialFilter.salary ||""
  });
 const jobTypeOptions=JOB_TYPES.map((type)=>({value:type,label:type}));
 const experienceOptions=EXPERIENCE_LEVEL.map((level)=>({value:level,label:level}));
@@ -14,7 +15,22 @@ const workModeOptions=WORK_MODES.map((mode)=>({value:mode,label:mode}));
 const salaryOptions=SALARY_RANGES.map((range)=>({value:range.value,label:range.label}));
 
 
+  const handleFilterChange=(key,value)=>{
+    const newFilters={...filters,[key]:value};
+    setFilters(newFilters);
+    onFilterChange(newFilters);
+
+  }
+
   const clearFilters=()=>{
+    const emptyFilters={
+      type:"",
+      experience:"",
+      workMode:"",
+      salary:""
+    };
+    setFilters(emptyFilters);
+    onFilterChange(emptyFilters);
 
   }
 console.log(WORK_MODES);
@@ -31,15 +47,15 @@ console.log(WORK_MODES);
        <div className='space-y-4'>
           <div>
             <label className='block text-sm font-medium text-gray-700 mb-2'>Job Type</label>
-            <Select options={jobTypeOptions} placeholder="Select Job Type" />
+            <Select value={jobTypeOptions.find(opt=>opt.value===filters.type)}  options={jobTypeOptions} onChange={(option)=>handleFilterChange("type",option?.value ||"")}  placeholder="Select Job Type" />
           </div>
            <div>
             <label className='block text-sm font-medium text-gray-700 mb-2'>Experience Level</label>
-            <Select options={experienceOptions}/>
+            <Select value={experienceOptions.find(opt=>opt.value===filters.experience)} options={experienceOptions} onChange={(option)=>handleFilterChange("experience",option?.value ||"")}/>
           </div>
            <div>
             <label className='block text-sm font-medium text-gray-700 mb-2'>Work Mode</label>
-            <Select options={workModeOptions}/>
+            <Select value={workModeOptions.find(opt=>opt.value===filters.workMode)} options={workModeOptions} onChange={(option)=>handleFilterChange("workMode",option?.value ||"")}/>
           </div>
            <div>
             <label className='block text-sm font-medium text-gray-700 mb-2'>Location</label>
@@ -47,7 +63,7 @@ console.log(WORK_MODES);
           </div>
            <div>
             <label className='block text-sm font-medium text-gray-700 mb-2'>Salary Range</label>
-            <Select options={salaryOptions}/>
+            <Select value={salaryOptions.find(opt=>opt.value===filters.salary)} options={salaryOptions} onChange={(option)=>handleFilterChange("salary",option?.value ||"")}/>
           </div>
            <div>
             <label className='block text-sm font-medium text-gray-700 mb-2'>Company</label>
