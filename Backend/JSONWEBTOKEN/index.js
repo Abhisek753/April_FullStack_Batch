@@ -4,13 +4,12 @@ const app=express();
 const dotenv=require("dotenv");
 dotenv.config();
 const authRoute=require("./routes/authRoutes");
+const productRoute=require("./routes/productRoute");
 const connectDB = require("./config/db");
 const authMiddleware = require("./middlewares/authMiddleware");
 app.use(express.json());
 
-app.get("/product",authMiddleware,(req,res)=>{
-    res.send("Product Api Working");
-});
+app.use("/product",productRoute);
 app.get("/",(req,res)=>{
     res.send("Get Api Working");
 })
