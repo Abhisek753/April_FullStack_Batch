@@ -8,7 +8,7 @@ const productRoute=require("./routes/productRoute");
 const connectDB = require("./config/db");
 const authMiddleware = require("./middlewares/authMiddleware");
 app.use(express.json());
-
+app.use("/uploads",express.static("uploads"));
 app.use("/product",productRoute);
 app.get("/",(req,res)=>{
     res.send("Get Api Working");
