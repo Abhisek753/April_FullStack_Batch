@@ -3,6 +3,7 @@ const express=require("express");
 const connectDB=require("./config/db");
 const userRoutes=require("./routes/userRoutes");
 const orderRoutes=require("./routes/orderRoutes");
+const analyticsRoutes=require("./routes/analyticsRoutes");
 const port=process.env.PORT||3000;
 const app=express();
 app.use(express.json());
@@ -12,6 +13,7 @@ app.get("/",(req,res)=>{
 })
 app.use("/api/users",userRoutes);
 app.use("/api/orders",orderRoutes);
+app.use("/api/analytics",analyticsRoutes);
 
 connectDB().then(()=>{
     app.listen(port,()=>{
