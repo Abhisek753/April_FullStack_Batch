@@ -72,6 +72,29 @@ const getDoctorById=async(req,res,next)=>{
      }
 }
 const updateDoctor=async(req,res,next)=>{
+    try{
+        const doctor =await Doctor.findById(req.params.id).populate("user","name email");
+        const {specialization,consultationFee,bio,isActive}=req.body;
+        if(specialization){
+            doctor.specialization=specialization;
+        }
+        if(consultationFee!==undefined){
+            doctor.consultationFee=consultationFee;
+        }
+        if(bio!=undefined){
+            doctor.bio=bio;
+        }
+        if(isActive!==undefined){
+            doctor.isActive=isActive;
+        }
+      await doctor.save();
+      return res.json({message:"Doctor Updated Successfully",doctor:doctor})
+
+
+    }catch(error){
+        return res.status(500).json({message:"Doctor update api failed",error:error});
+    }
+
 
 }
     
