@@ -4,7 +4,9 @@ const connectDB = require('./config/db');
 const authRoutes=require("./routes/authRoutes");
 const doctorRoutes=require("./routes/doctorRoutes");
 const scheduleRoutes=require("./routes/scheduleRoutes");
+const cors=require("cors");
 const app=express();
+app.use(cors());
 const port=process.env.PORT||5000;
 app.use(express.json());
 

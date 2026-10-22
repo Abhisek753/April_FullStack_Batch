@@ -1,0 +1,52 @@
+
+.brand{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+    text-decoration: none;
+    font-weight: 700;
+}
+.brand span{
+    color:blue;
+    font-size: 26px;
+}
+.app-header{
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    z-index: 100;
+    min-height: 68px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    border-bottom: 1px solid gray;
+    padding: 0 6vw;
+}
+
+.main-nav{
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-logout-btn{
+    background-color: #fff;
+    border: 1px solid gray;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+.nav-logout-btn:hover{
+    background-color: #f0f0f0;
+}
+.nav-user-name{
+    font-weight: 600;
+    color: #333;
+}
+
+.main-nav a{
+    color: black;
+    font-size: 16px;
+    text-decoration: none;
+}
