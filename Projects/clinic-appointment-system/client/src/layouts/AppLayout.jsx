@@ -7,7 +7,7 @@ const AppLayout = () => {
   return (
     <div>
         <Navbar/>
-        <main>
+        <main style={{minHeight: "80vh",marginTop: "60px"}}>
             <Outlet/>
         </main>
         <Footer/>

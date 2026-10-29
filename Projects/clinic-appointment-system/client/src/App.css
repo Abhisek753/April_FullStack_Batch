@@ -50,3 +50,77 @@
     font-size: 16px;
     text-decoration: none;
 }
+
+
+/* Home Page Css */
+
+.home-page{
+    background-color: #f2f2f2f2;
+    margin-top: 68px;
+    padding: 48px 0 56px;
+}
+
+.home-heading{
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.home-title{
+    color: rgb(54, 54, 175);
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.home-lead{
+    font-size: 1.1rem;
+    max-width: 580px;
+}
+
+.home-hero-img{
+    max-width: 100%;
+    width: 420px;
+    border-radius: 16px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.home-action{
+    display: flex;
+    flex-wrap: wrap;
+    gap:12px
+}
+
+.home-steps{
+    padding: 40px 0 56px;
+}
+.home-steps-title{
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 32px;
+}
+.home-step-card{
+    background-color: #fff;
+    /* border: 1px solid var(--border); */
+    border-radius: 12px;
+    padding: 24px;
+    height: 100%;
+}
+.home-step-num{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    border-radius: 5%;
+    font-weight: 700;
+    margin-bottom: 12px;
+    height: 36px;
+    background-color: rgb(171, 171, 245);
+
+}
+.home-step-card p{
+    margin-top: 0;
+    font-size: 15px;
+}
