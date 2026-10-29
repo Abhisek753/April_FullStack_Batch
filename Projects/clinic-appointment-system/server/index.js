@@ -4,6 +4,7 @@ const connectDB = require('./config/db');
 const authRoutes=require("./routes/authRoutes");
 const doctorRoutes=require("./routes/doctorRoutes");
 const scheduleRoutes=require("./routes/scheduleRoutes");
+const appointmentRoutes=require("./routes/appointmentRoutes");
 const cors=require("cors");
 const app=express();
 app.use(cors());
@@ -17,6 +18,7 @@ app.get("/home",(req,res)=>{
 app.use("/api/auth",authRoutes);
 app.use("/api/doctors",doctorRoutes);
 app.use("/api/schedules",scheduleRoutes);
+app.use("/api/appointments",appointmentRoutes);
 const startServer=async ()=>{
     await connectDB();
     app.listen(port,()=>{
